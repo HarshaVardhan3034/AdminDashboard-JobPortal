@@ -6,7 +6,11 @@ import routes from './routes/jobs.routes.js'
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
-app.use(cors());
+const corsOptions = {
+  origin: 'https://admindashboard-jobportal-1.onrender.com/',
+  credentials: true, // if you're using cookies or auth headers
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api",routes);
 
