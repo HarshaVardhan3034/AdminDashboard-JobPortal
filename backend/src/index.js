@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 const corsOptions = {
-  origin: 'https://admindashboard-jobportal-1.onrender.com/',
+  origin: 'https://admindashboard-jobportal-1.onrender.com',
   credentials: true, // if you're using cookies or auth headers
 };
 app.use(cors(corsOptions));
